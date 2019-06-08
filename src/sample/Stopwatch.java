@@ -3,7 +3,7 @@ package sample;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Class Stopwatch is using for work of Stopwatch.
+ * Class Stopwatch is used for work of Stopwatch.
  * Interface Runnable is used for work of thread.
  */
 public class Stopwatch implements Runnable
