@@ -15,7 +15,7 @@ public class Controller
     /**
      * Object of class Stopwatch which is used for work of stopwatch.
      */
-    public Stopwatch stopwatch=new Stopwatch(10);
+    Stopwatch stopwatch=new Stopwatch(10);
 
     /**
      * Time of every lap.
@@ -67,7 +67,7 @@ public class Controller
     {
         String buttonText=(String) btnStartOrPause.getText();
 
-        if (buttonText.equals("Start"))
+        if(buttonText.equals("Start"))
         {
             btnNewLap.setDisable(false);
             btnReset.setDisable(true);
@@ -77,7 +77,7 @@ public class Controller
             stopwatch.start();
         }
 
-        else if (buttonText.equals("Pause"))
+        else if(buttonText.equals("Pause"))
         {
             btnNewLap.setDisable(true);
             btnReset.setDisable(false);
@@ -132,7 +132,7 @@ public class Controller
             long minutes=stopwatch.getMinutes();
             double seconds=stopwatch.getSeconds();
 
-            if (hours<10
+            if(hours<10
                     && minutes<10
                     && seconds<10)
             {
@@ -142,7 +142,7 @@ public class Controller
                         seconds));
             }
 
-            else if (hours<10
+            else if(hours<10
                     && minutes<10
                     && seconds>=10)
             {
@@ -152,7 +152,7 @@ public class Controller
                         seconds));
             }
 
-            else if (hours<10
+            else if(hours<10
                     && minutes>=10
                     && seconds>=10)
             {
@@ -162,7 +162,7 @@ public class Controller
                         seconds));
             }
 
-            else if (hours<10
+            else if(hours<10
                     && minutes>=10
                     && seconds<10)
             {
@@ -172,7 +172,7 @@ public class Controller
                         seconds));
             }
 
-            else if (hours>=10
+            else if(hours>=10
                     && minutes<10
                     && seconds<10)
             {
@@ -182,7 +182,7 @@ public class Controller
                         seconds));
             }
 
-            else if (hours>=10
+            else if(hours>=10
                     && minutes<10
                     && seconds>=10)
             {
@@ -192,7 +192,7 @@ public class Controller
                         seconds));
             }
 
-            else if (hours>=10
+            else if(hours>=10
                     && minutes>=10
                     && seconds>=10)
             {
@@ -202,7 +202,7 @@ public class Controller
                         seconds));
             }
 
-            else if (hours>=10
+            else if(hours>=10
                     && minutes>=10
                     && seconds<10)
             {
@@ -225,7 +225,7 @@ public class Controller
         long minutes=stopwatch.getMinutes();
         double seconds=stopwatch.getSeconds();
 
-        if (hours<10
+        if(hours<10
                 && minutes<10
                 && seconds<10)
         {
@@ -236,7 +236,7 @@ public class Controller
                     seconds);
         }
 
-        else if (hours<10
+        else if(hours<10
                 && minutes<10
                 && seconds>=10)
         {
@@ -247,7 +247,7 @@ public class Controller
                     seconds);
         }
 
-        else if (hours<10
+        else if(hours<10
                 && minutes>=10
                 && seconds>=10)
         {
@@ -258,7 +258,7 @@ public class Controller
                     seconds);
         }
 
-        else if (hours<10
+        else if(hours<10
                 && minutes>=10
                 && seconds<10)
         {
@@ -269,7 +269,7 @@ public class Controller
                     seconds);
         }
 
-        else if (hours>=10
+        else if(hours>=10
                 && minutes<10
                 && seconds<10)
         {
@@ -280,7 +280,7 @@ public class Controller
                     seconds);
         }
 
-        else if (hours>=10
+        else if(hours>=10
                 && minutes<10
                 && seconds>=10)
         {
@@ -291,7 +291,7 @@ public class Controller
                     seconds);
         }
 
-        else if (hours>=10
+        else if(hours>=10
                 && minutes>=10
                 && seconds>=10)
         {
@@ -302,7 +302,7 @@ public class Controller
                     seconds);
         }
 
-        else if (hours>=10
+        else if(hours>=10
                 && minutes>=10
                 && seconds<10)
         {

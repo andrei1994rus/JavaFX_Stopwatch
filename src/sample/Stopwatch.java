@@ -40,7 +40,7 @@ public class Stopwatch implements Runnable
      *               time interval (in milliseconds) of stopwatch.
      *
      */
-    public Stopwatch(int interval)
+    Stopwatch(int interval)
     {
         this.interval=interval;
     }
@@ -87,8 +87,7 @@ public class Stopwatch implements Runnable
      */
     public final long getMinutes()
     {
-        long minutes=TimeUnit.MILLISECONDS.toMinutes(ticks*interval)%60;
-        return minutes;
+        return TimeUnit.MILLISECONDS.toMinutes(ticks*interval)%60;
     }
 
     /**
@@ -99,8 +98,7 @@ public class Stopwatch implements Runnable
      */
     public final long getHours()
     {
-        long hours=TimeUnit.MILLISECONDS.toHours(ticks*interval);
-        return hours;
+        return TimeUnit.MILLISECONDS.toHours(ticks*interval);
     }
 
     /**
@@ -108,7 +106,7 @@ public class Stopwatch implements Runnable
      */
     public final void start()
     {
-        if (thread==null)
+        if(thread==null)
         {
             thread=new Thread(this);
             thread.setDaemon(true);
@@ -124,7 +122,7 @@ public class Stopwatch implements Runnable
      */
     public final void pause()
     {
-        if (thread!=null)
+        if(thread!=null)
         {
             thread=null;
         }
@@ -150,19 +148,19 @@ public class Stopwatch implements Runnable
     @Override
     public final void run()
     {
-        while (thread!=null)
+        while(thread!=null)
         {
             try
             {
                 Thread.sleep(interval);
             }
 
-            catch (InterruptedException e)
+            catch(InterruptedException e)
             {
-
+                e.printStackTrace();
             }
 
-            if (thread!=null)
+            if(thread!=null)
             {
                 ticks++;
 
